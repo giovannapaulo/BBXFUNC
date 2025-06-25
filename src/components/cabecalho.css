@@ -1,0 +1,102 @@
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 25px 3%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  background-color: #fff7e5; 
+  font-family: var(--fontPadrao);
+  font-size: 1.5em;
+  font-style: normal;
+  color: var(--marrom);
+}
+
+.nomeSite {
+  font-weight: bold;
+  color: var(--marrom);
+}
+
+
+.telasNavegacao {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 25px;
+}
+
+.telasNavegacao a {
+  text-decoration: none;
+  color: var(--marrom);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.telasNavegacao a:hover {
+  color: var(--rosaForte);
+}
+.iconePerfil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content; 
+  height: max-content;
+}
+
+.iconePerfil i {
+  font-size: 4em; 
+  color: var(--marrom);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .cabecalho {
+    padding: 15px;
+    font-size: 1.2em;
+  }
+
+  .nomeSite {
+    font-size: 1.5em;
+  }
+
+  .telasNavegacao {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cabecalho {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    font-size: 1em;
+  }
+
+  .nomeSite {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+
+  .telasNavegacao {
+    position: static;
+    transform: none;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .iconePerfil {
+    margin-top: 5px;
+  }
+}
+
+.logo-img {
+  height: 80px; 
+  object-fit: contain;
+}

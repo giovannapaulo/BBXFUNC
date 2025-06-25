@@ -1,0 +1,65 @@
+/* Configurações gerais */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --fontPadrao: "Bebas Neue", sans-serif;
+  /* Tabela de Cores */
+  --branco: #fcfef5;
+  --cinzaClaro: #e2e2e2;
+  --cinzaEscuro: #555;
+  --cinzaMaisEscuro: #333;
+  --preto: #000000;
+
+  --verdeSuave: #d6e6c3;
+  --cremeClaro: #feffed;
+  /* --creme: #fdffd9; */
+  --ocre: #fff0b8;
+  --laranja: #ffd6a3;
+  --salmao: #faad8e;
+  --verde: #142f30;
+
+  --creme: #fff7e5;
+  --rosaClaro: #fecdd0;
+  --rosaMedio: #f8afb8;
+  --rosaForte: #f5a3af;
+  --marrom: #59483e;
+
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100% !important;
+  font-family: "Bebas Neue", sans-serif;
+  background-color: var(--branco);
+}
+
+/* Barra de Rolagem Personalizada */
+html ::-webkit-scrollbar {
+  width: 10px;
+}
+
+html ::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: var(--preto);
+}
+
+html ::-webkit-scrollbar-track {
+  background: var(--cinzaClaro);
+}

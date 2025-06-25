@@ -1,0 +1,395 @@
+/* Configurações gerais */
+
+.lists-container {
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+  padding: 20px;
+}
+
+/* Título */
+
+.title {
+  font-size: 5rem;
+  margin: 120px 0 47px 0;
+  text-align: center;
+}
+
+/* Perfil */
+
+.profile-section {
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: #f6d6e1; 
+  gap: 10px;
+}
+
+.profile-icon {
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+.profile-info {
+  color: var(--cinzaMaisEscuro);
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+#nameProfile {
+  color: var(--preto);
+  font-size: 20px;
+}
+
+#nameProfile:hover {
+  text-decoration: underline;
+}
+
+/* Lista de Fotos */
+
+.photo-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.photo-item {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+
+.add-list-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--branco);
+  color: var(--verde);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.add-list-icon:hover {
+  background-color: var(--cinzaClaro);
+}
+
+/* Pop-up */
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+form {
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 100px;
+}
+
+input::placeholder, textarea::placeholder {
+  font-style: italic;
+  color: #888;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button[type="submit"] {
+  background-color: var(--verde);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 4rem;
+    margin: 116px 0 33px 0;
+  }
+
+  .profile-icon {
+    margin-right: 0;
+    font-size: 2.5rem;
+  }
+
+  .profile-info h3 {
+    font-size: 1.2rem;
+  }
+
+  #nameProfile {
+    font-size: 1.5rem;
+  }
+
+  .photo-grid {
+    flex-wrap: wrap;
+  }
+
+  .photo-item {
+    width: 100px;
+    height: 150px;
+    margin: 5px;
+  }
+
+  .add-list-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.8rem;
+    margin: 86px 0 15px 0;
+  }
+
+  .photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .photo-item {
+    width: 100px;
+    height: 140px;
+  }
+
+  .add-list-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+}
+
+#btnForm {
+  background-color: #fecdd0;
+  border: 2px solid #f5a3af;
+  color: #59483e;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 14px 50px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(245, 163, 175, 0.3);
+}
+
+#btnForm:hover {
+  background-color: #f5a3af;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(245, 163, 175, 0.5);
+}
+
+#btnForm:focus {
+  outline: none;
+}
+
+#btnEvento{
+  background-color: var(--rosaMedio);
+}
+
+.filter-dropdown-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.filter-dropdown {
+  background-color: #fecdd0;
+  color: #59483e;
+  border: 2px solid #f5a3af;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(245, 163, 175, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  appearance: none; /* Remove estilo padrão do select */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='%2359483e' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.filter-dropdown:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(245, 163, 175, 0.4);
+}
+
+.filter-dropdown option:disabled {
+  color: #999;
+}
+
+
+
+.curtir-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #f5a3af;
+  transition: color 0.2s ease;
+  margin-left: auto;
+}
+
+.curtir-btn:hover {
+  color: #0056b3;
+}
+
+.empty-message {
+  text-align: center;
+  font-style: italic;
+  margin-top: 20px;
+  color: #666;
+}
+
+/* Popup ajustes */
+.livros-selecionados-list {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.livro-selecionado {
+  background-color: #eee;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.livro-selecionado button {
+  background: #ef80d0;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  line-height: 15px;
+  padding: 0;
+}
+
+.curtir-btn,
+.acao-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #f5a3af;
+  transition: color 0.2s ease;
+}
+
+.curtir-btn:hover,
+.acao-btn:hover {
+  color: #d6336c;
+}
+
+.btn-group-icons {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+  align-items: center;
+}
+
+.lista-nome {
+  color: #7d4f3f; 
+  opacity: 0.7;
+  font-weight: 600; 
+  margin-top: 4px; 
+  font-size: 2rem; 
+}
