@@ -216,7 +216,7 @@ export default function Evento() {
 
           <div className="mb-3 d-flex justify-content-center gap-3 flex-wrap" style={{ marginTop: '1rem' }}>
 
-            <DropdownButton id="dropdown-regiao" title={`Região: ${filtroRegiao}`}>
+            <DropdownButton id="dropdown-regiao" title={`Estado: ${filtroRegiao}`}>
               {["Todos", "AC", "BA", "DF", "SP", "RJ", "RS", "AM", "MG"].map(regiao => (
                 <Dropdown.Item key={regiao} onClick={() => setFiltroRegiao(regiao)}>
                   {regiao}
