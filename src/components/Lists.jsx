@@ -288,6 +288,7 @@ function Lists() {
                 <label htmlFor="livrosSelecionados">Escolha os livros</label>
                 <select
                   id="livrosSelecionados"
+                   className="filter-dropdown"
                   onChange={handleLivroSelecionado}
                   defaultValue=""
                 >
