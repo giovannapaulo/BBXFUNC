@@ -84,7 +84,7 @@ function UserDashboard() {
       .then(curtidasRes => {
         const curtidasComentarios = curtidasRes.data.count ?? 0;
         const curtidasListasCount = listasCurtidas.length ?? 0;
-        setNumCurtidas(curtidasComentarios + curtidasListasCount);
+        setNumCurtidas(curtidasComentarios);
       })
       .catch(err => {
         console.warn('Erro ao buscar contagem de curtidas:', err);
