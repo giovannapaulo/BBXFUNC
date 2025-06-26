@@ -121,37 +121,24 @@ export default function Dramatico() {
             ))}
           </select>
         )}
-        <div className="dropdown-letra">
-          <button onClick={() => setMostrarLetras(!mostrarLetras)} className="filtro-botao quadrado">Filtrar por Letra ▾</button>
-          {mostrarLetras && (
-            <div className="letras-menu">
-              {"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map((letra) => (
-                <button
-                  key={letra}
-                  className="letra-item"
-                  onClick={() => {
-                    setLetraSelecionada(letra);
-                    setLivros(todosLivros.filter(livro => livro.Titulo.toUpperCase().startsWith(letra)));
-                    setMostrarLetras(false);
-                    setAutorSelecionado('');
-                  }}
-                >
-                  {letra}
-                </button>
-              ))}
-              <button
-                className="letra-item limpar"
-                onClick={() => {
-                  setLetraSelecionada('');
-                  setLivros(todosLivros);
-                  setMostrarLetras(false);
-                }}
-              >
-                Todos
-              </button>
-            </div>
-          )}
-        </div>
+      <select value={letraSelecionada} onChange={(e) => {
+       const letra = e.target.value;
+       setLetraSelecionada(letra);
+       setAutorSelecionado('');
+       if (letra === '') {
+           setLivros(todosLivros);
+    } else {
+      setLivros(todosLivros.filter(livro => livro.Titulo.toUpperCase().startsWith(letra)));
+    }
+  }}
+   className="filtro-botao quadrado"
+>
+  <option value="">Todas as letras</option>
+  {"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map((letra) => (
+    <option key={letra} value={letra}>{letra}</option>
+  ))}
+</select>
+
         <select value={ordem} onChange={handleOrdemChange} className="filtro-botao quadrado">
           <option value="">Ordem padrão</option>
           <option value="az">Título (A–Z)</option>
