@@ -107,13 +107,26 @@ export default function Evento() {
   };
 
   function formatarDataHora(dataISO, horaStr) {
-    const dataObj = new Date(dataISO);
-    if (isNaN(dataObj)) return `${dataISO} às ${horaStr}`;
-    const dia = String(dataObj.getDate()).padStart(2, '0');
-    const mes = String(dataObj.getMonth() + 1).padStart(2, '0');
-    const ano = dataObj.getFullYear();
-    return `${dia}/${mes}/${ano} às ${horaStr}`;
+  const dataObj = new Date(dataISO);
+  if (isNaN(dataObj)) return `${dataISO} às ${horaStr}`;
+
+  const dia = String(dataObj.getDate()).padStart(2, '0');
+  const mes = String(dataObj.getMonth() + 1).padStart(2, '0');
+  const ano = dataObj.getFullYear();
+
+  let horaFormatada = horaStr;
+
+  if (horaStr && horaStr.includes(':')) {
+    const partes = horaStr.split(':');
+    const hora = partes[0].padStart(2, '0');
+    const minuto = (partes[1] || '00').padStart(2, '0');
+
+    
+    horaFormatada = minuto !== '00' ? `${hora}:${minuto}h` : `${hora}h`;
   }
+
+  return `${dia}/${mes}/${ano} às ${horaFormatada}`;
+}
 
   const toggleFavorito = (id) => {
     if (favoritos.includes(id)) {
