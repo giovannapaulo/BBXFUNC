@@ -234,6 +234,13 @@
   background-color: #333;
 }
 
+.filtro-botao.quadrado {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  border-radius: 8px;
+}
+
+
 .letras-menu {
   position: absolute;
   top: 110%; 
